@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description" content="Personal portfolio of a creative developer specializing in web and mobile applications.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <main>
+        <!-- SIDEBAR -->
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./assets/download.png" alt="Profile Photo" width="80">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="John Doe">Akhileswar Kamale</h1>
+                    <p class="title">Full Stack Developer</p>
+                </div>
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:hello@example.com" class="contact-link">akhilkamale@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+                            <a href="tel:+919392822250" class="contact-link">+91 9392822250</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Tirupati, India</address>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <img src="./assets/icons8-github-100.png" alt="GitHub" width="33" height="33">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <img src="./assets/icons8-linkedin-48.png" alt="LinkedIn" width="25" height="25">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <img src="./assets/icons8-leetcode-24.png" alt="LeetCode" width="25" height="25">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <img src="./assets/icons8-hackerrank-48.png" alt="HackerRank" width="25" height="25">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <img src="./assets/icons8-instagram-48.png" alt="Instagram" width="20">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- NAVBAR -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link="about"><ion-icon name="person-outline"></ion-icon><span>About</span></button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link="skills"><ion-icon name="construct-outline"></ion-icon><span>Skills</span></button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link="projects"><ion-icon name="briefcase-outline"></ion-icon><span>Projects</span></button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link="resume"><ion-icon name="document-text-outline"></ion-icon><span>Resume</span></button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link="contact"><ion-icon name="mail-outline"></ion-icon><span>Contact</span></button></li>
+                </ul>
+            </nav>
+
+            <!-- ABOUT -->
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
+                <section class="about-text">
+                    <p>I'm a Full Stack Developer from San Francisco, California, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                    <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+                </section>
+
+                <section class="service">
+                    <h3 class="h3 service-title">What i'm doing</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./assets/icon-design.svg" alt="design icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Web design</h4>
+                                <p class="service-item-text">The most modern and high-quality design made at a professional level.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./assets/icon-dev.svg" alt="Web development icon" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Web development</h4>
+                                <p class="service-item-text">High-quality development of sites at the professional level.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- SKILLS -->
+            <article class="skills" data-page="skills">
+                <header>
+                    <h2 class="h2 article-title">My Skills</h2>
+                </header>
+
+                <section class="skill">
+                    <h3 class="h3 service-title">Technologies</h3>
+                    <div class="tech-icons-container">
+                        <img src="https://skillicons.dev/icons?i=html,css,python,js,java,react,tailwind,nodejs,mongodb,mysql,express,git,github,docker,linux&perline=8" alt="Tech Stack">
+                    </div>
+                </section>
+
+                <section class="certifications">
+                    <h3 class="h3 service-title">Certifications</h3>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Full Stack Web Development" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Full Stack Web Development</h4>
+                                    <p class="cert-item-text">Coursera | IBM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Python for Data Science" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Python for Data Science</h4>
+                                    <p class="cert-item-text">EdX | Harvard University</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- PROJECTS -->
+            <article class="projects" data-page="projects">
+                <header>
+                    <h2 class="h2 article-title">Projects</h2>
+                </header>
+                <section class="projects">
+                    <ul class="filter-list">
+                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+                        <li class="filter-item"><button data-filter-btn>Web design</button></li>
+                        <li class="filter-item"><button data-filter-btn>Applications</button></li>
+                        <li class="filter-item"><button data-filter-btn>Web development</button></li>
+                    </ul>
+
+                    <ul class="project-list">
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <img src="./assets/project-1.png" alt="finance" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Finance</h3>
+                                <p class="project-category">Web development</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- RESUME -->
+            <article class="resume" data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+                        <h3 class="h3">Education</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">University of California</h4>
+                            <span>2015 — 2019</span>
+                            <p class="timeline-text">Nemo enims ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+                        <h3 class="h3">Experience</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Creative director</h4>
+                            <span>2015 — Present</span>
+                            <p class="timeline-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </li>
+                    </ol>
+                </section>
+            </article>
+
+            <!-- CONTACT -->
+            <article class="contact" data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+                <section class="mapbox">
+                    <figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.56512571346!2d-121.5833417!3d38.5616505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x7a1a7071ef6221c0!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd" width="400" height="300" loading="lazy"></iframe>
+                    </figure>
+                </section>
+
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Contact Form</h3>
+                    <form action="https://formspree.io/f/mykopkbb" method="POST" class="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                        </div>
+                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                        <button class="form-btn" type="submit" disabled data-form-btn>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
