@@ -17,8 +17,20 @@
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item"><button class="navbar-link active" data-nav-link="about"><ion-icon name="person-outline"></ion-icon><span>About</span></button></li>
+            <li class="navbar-item"><button class="navbar-link" data-nav-link="skills"><ion-icon name="construct-outline"></ion-icon><span>Skills</span></button></li>
+            <li class="navbar-item"><button class="navbar-link" data-nav-link="projects"><ion-icon name="briefcase-outline"></ion-icon><span>Projects</span></button></li>
+            <li class="navbar-item"><button class="navbar-link" data-nav-link="resume"><ion-icon name="document-text-outline"></ion-icon><span>Resume</span></button></li>
+            <li class="navbar-item"><button class="navbar-link" data-nav-link="contact"><ion-icon name="mail-outline"></ion-icon><span>Contact</span></button></li>
+        </ul>
+    </nav>
 
     <main>
         <!-- SIDEBAR -->
@@ -71,28 +83,28 @@
                 <div class="separator"></div>
                 <ul class="social-list">
                     <li class="social-item">
-                        <a href="#" class="social-link">
-                            <img src="./assets/icons8-github-100.png" alt="GitHub" width="33" height="33">
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="github"></i>
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="#" class="social-link">
-                            <img src="./assets/icons8-linkedin-48.png" alt="LinkedIn" width="25" height="25">
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="linkedin"></i>
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="#" class="social-link">
-                            <img src="./assets/icons8-leetcode-24.png" alt="LeetCode" width="25" height="25">
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="code-2"></i>
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="#" class="social-link">
-                            <img src="./assets/icons8-hackerrank-48.png" alt="HackerRank" width="25" height="25">
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="terminal"></i>
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="#" class="social-link">
-                            <img src="./assets/icons8-instagram-48.png" alt="Instagram" width="20">
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="instagram"></i>
                         </a>
                     </li>
                 </ul>
@@ -101,17 +113,6 @@
 
         <!-- MAIN CONTENT -->
         <div class="main-content">
-            <!-- NAVBAR -->
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><button class="navbar-link active" data-nav-link="about"><ion-icon name="person-outline"></ion-icon><span>About</span></button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link="skills"><ion-icon name="construct-outline"></ion-icon><span>Skills</span></button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link="projects"><ion-icon name="briefcase-outline"></ion-icon><span>Projects</span></button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link="resume"><ion-icon name="document-text-outline"></ion-icon><span>Resume</span></button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link="contact"><ion-icon name="mail-outline"></ion-icon><span>Contact</span></button></li>
-                </ul>
-            </nav>
-
             <!-- ABOUT -->
             <article class="about active" data-page="about">
                 <header>
@@ -155,33 +156,307 @@
 
                 <section class="skill">
                     <h3 class="h3 service-title">Technologies</h3>
-                    <div class="tech-icons-container">
-                        <img src="https://skillicons.dev/icons?i=html,css,python,js,java,react,tailwind,nodejs,mongodb,mysql,express,git,github,docker,linux&perline=8" alt="Tech Stack">
-                    </div>
+                    <ul class="skills-list">
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="40"></div>
+                            <p class="skills-name">HTML5</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="40"></div>
+                            <p class="skills-name">CSS3</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="40"></div>
+                            <p class="skills-name">JavaScript</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="40"></div>
+                            <p class="skills-name">Python</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="40"></div>
+                            <p class="skills-name">Java</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="40"></div>
+                            <p class="skills-name">React</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" width="40"></div>
+                            <p class="skills-name">Tailwind</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40"></div>
+                            <p class="skills-name">Node.js</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="40"></div>
+                            <p class="skills-name">MongoDB</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="40"></div>
+                            <p class="skills-name">MySQL</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" width="40" style="filter: invert(1);"></div>
+                            <p class="skills-name">Express</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="40"></div>
+                            <p class="skills-name">Git</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" style="filter: invert(1);"></div>
+                            <p class="skills-name">GitHub</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="40"></div>
+                            <p class="skills-name">Docker</p>
+                        </li>
+                        <li class="skills-item">
+                            <div class="skills-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="40"></div>
+                            <p class="skills-name">Linux</p>
+                        </li>
+                    </ul>
                 </section>
 
                 <section class="certifications">
                     <h3 class="h3 service-title">Certifications</h3>
+
+                    <!-- Foundations -->
+                    <h4 class="h4 cert-category-title">Foundations</h4>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <a href="./assets/Certifications/Github Foundations.pdf" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="GitHub Foundations" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">GitHub Foundations</h4>
+                                    <p class="cert-item-text">GitHub</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="./assets/Certifications/OCI Foundations.pdf" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="OCI Foundations" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">OCI Foundations</h4>
+                                    <p class="cert-item-text">Oracle</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Git & GitHub -->
+                    <h4 class="h4 cert-category-title">Git & GitHub</h4>
                     <ul class="cert-list">
                         <li class="cert-item">
                             <a href="#" target="_blank" class="cert-link">
                                 <figure class="cert-img">
-                                    <img src="./assets/image.png" alt="Full Stack Web Development" loading="lazy">
+                                    <img src="./assets/image.png" alt="Introduction to Git" loading="lazy">
                                 </figure>
                                 <div class="cert-content">
-                                    <h4 class="h4 cert-item-title">Full Stack Web Development</h4>
-                                    <p class="cert-item-text">Coursera | IBM</p>
+                                    <h4 class="h4 cert-item-title">Introduction to Git</h4>
+                                    <p class="cert-item-text">DataCamp</p>
                                 </div>
                             </a>
                         </li>
                         <li class="cert-item">
                             <a href="#" target="_blank" class="cert-link">
                                 <figure class="cert-img">
-                                    <img src="./assets/image.png" alt="Python for Data Science" loading="lazy">
+                                    <img src="./assets/image.png" alt="Intermediate Git" loading="lazy">
                                 </figure>
                                 <div class="cert-content">
-                                    <h4 class="h4 cert-item-title">Python for Data Science</h4>
-                                    <p class="cert-item-text">EdX | Harvard University</p>
+                                    <h4 class="h4 cert-item-title">Intermediate Git</h4>
+                                    <p class="cert-item-text">DataCamp</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Advanced Git" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Advanced Git</h4>
+                                    <p class="cert-item-text">DataCamp</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Intro to GitHub Concepts" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Intro to GitHub Concepts</h4>
+                                    <p class="cert-item-text">DataCamp</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Intermediate GitHub Concepts" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Intermediate GitHub Concepts</h4>
+                                    <p class="cert-item-text">DataCamp</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Docker -->
+                    <h4 class="h4 cert-category-title">Docker</h4>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Introduction to Docker" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Introduction to Docker</h4>
+                                    <p class="cert-item-text">DataCamp</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Intermediate Docker" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Intermediate Docker</h4>
+                                    <p class="cert-item-text">DataCamp</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Python -->
+                    <h4 class="h4 cert-category-title">Python</h4>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Intermediate Python" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Intermediate Python</h4>
+                                    <p class="cert-item-text">Frontend Masters</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Python Essentials 1" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Python Essentials 1</h4>
+                                    <p class="cert-item-text">Cisco</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Python Essentials 2" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Python Essentials 2</h4>
+                                    <p class="cert-item-text">Cisco</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Python" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Python</h4>
+                                    <p class="cert-item-text">Future Learn</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Cyber Security -->
+                    <h4 class="h4 cert-category-title">Cyber Security</h4>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Cyber Security" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Cyber Security</h4>
+                                    <p class="cert-item-text">Udemy</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Cyber Security" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Cyber Security</h4>
+                                    <p class="cert-item-text">Cisco</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Competitive Programming -->
+                    <h4 class="h4 cert-category-title">Competitive Programming</h4>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Competitive Programming" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Competitive Programming</h4>
+                                    <p class="cert-item-text">CodeChef</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Competitive Programming" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Competitive Programming</h4>
+                                    <p class="cert-item-text">HackerRank</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Competitive Programming" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Competitive Programming</h4>
+                                    <p class="cert-item-text">GeeksforGeeks</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="#" target="_blank" class="cert-link">
+                                <figure class="cert-img">
+                                    <img src="./assets/image.png" alt="Competitive Programming" loading="lazy">
+                                </figure>
+                                <div class="cert-content">
+                                    <h4 class="h4 cert-item-title">Competitive Programming</h4>
+                                    <p class="cert-item-text">LeetCode</p>
                                 </div>
                             </a>
                         </li>
@@ -203,15 +478,80 @@
                     </ul>
 
                     <ul class="project-list">
+                        <li class="project-item active" data-filter-item data-category="web design">
+                            <figure class="project-img">
+                                <img src="./assets/Student-info-manger.png" alt="Artistic" loading="lazy">
+                            </figure>
+                            <div class="project-footer">
+                                <div class="project-content-wrapper">
+                                    <h3 class="project-title">Artistic</h3>
+                                    <p class="project-category">Web design</p>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link-icon" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                                    <a href="#" class="project-link-icon" target="_blank" title="Live Demo"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="applications">
+                            <figure class="project-img">
+                                <img src="./assets/Student-info-manger.png" alt="Student Info Manager" loading="lazy">
+                            </figure>
+                            <div class="project-footer">
+                                <div class="project-content-wrapper">
+                                    <h3 class="project-title">Student Info Manager</h3>
+                                    <p class="project-category">Applications</p>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link-icon" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                                    <a href="#" class="project-link-icon" target="_blank" title="Live Demo"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="applications">
+                            <figure class="project-img">
+                                <img src="./assets/Student-info-manger.png" alt="Currency Converter" loading="lazy">
+                            </figure>
+                            <div class="project-footer">
+                                <div class="project-content-wrapper">
+                                    <h3 class="project-title">Currency Converter</h3>
+                                    <p class="project-category">Applications</p>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link-icon" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                                    <a href="#" class="project-link-icon" target="_blank" title="Live Demo"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                        </li>
                         <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                                    <img src="./assets/project-1.png" alt="finance" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Finance</h3>
-                                <p class="project-category">Web development</p>
-                            </a>
+                            <figure class="project-img">
+                                <img src="./assets/Student-info-manger.png" alt="Random Quote Generator" loading="lazy">
+                            </figure>
+                            <div class="project-footer">
+                                <div class="project-content-wrapper">
+                                    <h3 class="project-title">Random Quote Generator</h3>
+                                    <p class="project-category">Web development</p>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link-icon" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                                    <a href="#" class="project-link-icon" target="_blank" title="Live Demo"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="applications">
+                            <figure class="project-img">
+                                <img src="./assets/Student-info-manger.png" alt="Handeffects Project" loading="lazy">
+                            </figure>
+                            <div class="project-footer">
+                                <div class="project-content-wrapper">
+                                    <h3 class="project-title">Handeffects Project</h3>
+                                    <p class="project-category">Applications</p>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link-icon" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                                    <a href="#" class="project-link-icon" target="_blank" title="Live Demo"><ion-icon name="link-outline"></ion-icon></a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </section>
@@ -256,11 +596,6 @@
                 <header>
                     <h2 class="h2 article-title">Contact</h2>
                 </header>
-                <section class="mapbox">
-                    <figure>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.56512571346!2d-121.5833417!3d38.5616505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x7a1a7071ef6221c0!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd" width="400" height="300" loading="lazy"></iframe>
-                    </figure>
-                </section>
 
                 <section class="contact-form">
                     <h3 class="h3 form-title">Contact Form</h3>
