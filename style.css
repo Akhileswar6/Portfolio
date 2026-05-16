@@ -335,14 +335,12 @@ body {
 }
 
 .social-item .social-link:hover {
-  color: var(--orange-yellow-crayola);
+  color: var(--white-1);
   transform: translateY(-2px);
 }
 
-.social-item .social-link svg {
-  width: 20px;
-  height: 20px;
-  stroke-width: 2px;
+.social-item .social-link ion-icon {
+  font-size: 20px;
 }
 
 /*-----------------------------------*\
@@ -434,8 +432,13 @@ article.active {
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*-----------------------------------*\
@@ -1167,6 +1170,31 @@ article.active {
   margin-bottom: 25px;
 }
 
+.contact-social {
+  margin-top: 30px;
+}
+
+.contact-social .social-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.contact-social .social-item .social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
+.contact-social .social-item .social-link ion-icon {
+  font-size: 22px;
+}
+
 .input-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -1206,14 +1234,14 @@ textarea.form-input {
 
 .form-btn {
   position: relative;
-  width: 100%;
+  width: max-content;
   background: var(--bg-gradient-onyx);
   color: var(--orange-yellow-crayola);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  padding: 16px 25px;
+  padding: 12px 24px;
   border-radius: 16px;
   font-size: var(--fs-6);
   font-weight: var(--fw-600);
@@ -1361,7 +1389,6 @@ textarea.form-input {
   }
 
   .form-btn {
-    width: max-content;
     margin-left: auto;
   }
 }
@@ -1440,7 +1467,7 @@ textarea.form-input {
     margin: 0;
     border-radius: 20px;
     padding: 30px;
-    padding-top: 50px; 
+    padding-top: 50px;
     position: relative;
   }
 
@@ -1450,7 +1477,8 @@ textarea.form-input {
   }
 
   .navbar {
-    all: unset; /* Reset all inherited styles */
+    all: unset;
+    /* Reset all inherited styles */
     position: fixed;
     top: 15px;
     left: 50%;
@@ -1469,11 +1497,13 @@ textarea.form-input {
   }
 
   main {
-    margin-top: 40px; /* Further reduced space */
+    margin-top: 40px;
+    /* Further reduced space */
   }
 
   .sidebar {
-    top: 60px; /* Further adjusted sticky top */
+    top: 60px;
+    /* Further adjusted sticky top */
   }
 
   .navbar-list {
