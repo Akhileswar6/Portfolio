@@ -43,10 +43,6 @@
                     <h1 class="name" title="John Doe">Akhileswar Kamale</h1>
                     <p class="title">Full Stack Developer</p>
                 </div>
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
             </div>
 
             <div class="sidebar-info_more">
@@ -104,6 +100,10 @@
                     </li>
                 </ul>
             </div>
+
+            <button class="info_more-btn" data-sidebar-btn>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
         </aside>
 
         <!-- MAIN CONTENT -->
@@ -375,10 +375,16 @@
             <article class="resume" data-page="resume">
                 <header class="resume-header">
                     <h2 class="h2 article-title">Resume</h2>
-                    <a href="./assets/Akhileswar_Kamale_Resume.pdf" download class="download-btn">
-                        <ion-icon name="download-outline"></ion-icon>
-                        <span>Resume</span>
-                    </a>
+                    <div class="resume-actions">
+                        <a href="./assets/Akhileswar_Kamale_Resume.pdf" target="_blank" class="download-btn">
+                            <ion-icon name="eye-outline"></ion-icon>
+                            <span>View PDF</span>
+                        </a>
+                        <a href="./assets/Akhileswar_Kamale_Resume.pdf" download="Akhileswar_Kamale_Resume.pdf" class="download-btn">
+                            <ion-icon name="download-outline"></ion-icon>
+                            <span>Download</span>
+                        </a>
+                    </div>
                 </header>
                 <section class="timeline">
                     <div class="title-wrapper">

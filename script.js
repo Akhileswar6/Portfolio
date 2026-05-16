@@ -82,25 +82,49 @@ form.addEventListener("submit", function (event) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Function to handle page changes
+const changePage = function (targetPage) {
+  let isPageFound = false;
+  
+  for (let i = 0; i < pages.length; i++) {
+    if (targetPage === pages[i].dataset.page) {
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+      window.scrollTo(0, 0);
+      isPageFound = true;
+    } else {
+      pages[i].classList.remove("active");
+      navigationLinks[i].classList.remove("active");
+    }
+  }
+
+  // If page not found or empty hash, default to first page
+  if (!isPageFound && pages.length > 0) {
+    pages[0].classList.add("active");
+    navigationLinks[0].classList.add("active");
+  }
+}
+
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-
     const targetPage = this.dataset.navLink;
-
-    for (let i = 0; i < pages.length; i++) {
-      if (targetPage === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
+    location.hash = targetPage;
+    changePage(targetPage);
   });
 }
+
+// Handle initial load
+window.addEventListener("load", function () {
+  const hash = location.hash.replace("#", "");
+  changePage(hash || "about");
+});
+
+// Handle browser back/forward buttons
+window.addEventListener("hashchange", function () {
+  const hash = location.hash.replace("#", "");
+  changePage(hash || "about");
+});
 
 // Initialize Lucide icons
 if (window.lucide) {
