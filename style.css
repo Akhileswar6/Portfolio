@@ -526,6 +526,68 @@ article.active {
   #RESUME
 \*-----------------------------------*/
 
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.download-btn {
+  background: var(--bg-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  border: 1px solid var(--jet);
+  transition: var(--transition-1);
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  position: relative;
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+
+.download-btn:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
+
+.download-btn ion-icon {
+  font-size: 20px;
+  --ionicon-stroke-width: 40px;
+}
+
+@media (max-width: 580px) {
+  .resume-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .timeline {
   margin-bottom: 30px;
 }
