@@ -196,6 +196,7 @@ body {
 \*-----------------------------------*/
 
 .sidebar {
+  position: relative;
   margin-bottom: 20px;
   max-height: 120px;
   overflow: hidden;
@@ -212,6 +213,11 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+}
+
+.info-content {
+  flex-grow: 1;
+  min-width: 0; /* Allows text to wrap/shrink properly in flex */
 }
 
 .avatar-box {
@@ -241,16 +247,33 @@ body {
 
 .info_more-btn {
   position: absolute;
-  top: -20px;
-  right: -20px;
-  border-radius: 0 24px;
-  font-size: 14px;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background: var(--bg-gradient-onyx);
   color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
-  padding: 12px;
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: var(--shadow-3);
   z-index: 1;
+  transition: var(--transition-1);
+  border: 1px solid var(--jet);
+}
+
+@media (max-width: 1024px) {
+  .info_more-btn {
+    top: auto;
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+  }
 }
 
 .info_more-btn::before {
@@ -260,14 +283,26 @@ body {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+  transition: var(--transition-1);
 }
 
 .info_more-btn:hover {
-  background: var(--bg-gradient-yellow-1);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-4);
 }
 
 .info_more-btn:hover::before {
   background: var(--bg-gradient-yellow-2);
+}
+
+.info_more-btn ion-icon {
+  font-size: 18px;
+  --ionicon-stroke-width: 40px;
+  transition: transform var(--transition-1);
+}
+
+.sidebar.active .info_more-btn ion-icon {
+  transform: rotate(180deg);
 }
 
 .info_more-btn span {
@@ -575,6 +610,19 @@ article.active {
   --ionicon-stroke-width: 40px;
 }
 
+.resume-actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .resume-actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 580px) {
   .resume-header {
     flex-direction: column;
@@ -582,6 +630,11 @@ article.active {
     gap: 15px;
   }
   
+  .resume-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
   .download-btn {
     width: 100%;
     justify-content: center;
@@ -1389,19 +1442,25 @@ textarea.form-input {
     padding: 5px 18px;
   }
 
+  .sidebar-info {
+    padding-right: 0;
+  }
+
+  .info-content {
+    max-width: 100%;
+  }
+
   .info_more-btn {
-    top: -30px;
-    right: -30px;
-    padding: 15px;
+    padding: 10px 20px;
+    font-size: var(--fs-6);
   }
 
   .info_more-btn span {
-    display: block;
-    text-transform: capitalize;
+    display: none;
   }
 
   .info_more-btn ion-icon {
-    display: none;
+    display: block;
   }
 
   .contacts-list {
