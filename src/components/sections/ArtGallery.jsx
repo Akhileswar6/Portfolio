@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { artCategories, artworksData } from '../../data/artworksData';
 import { ArtLightboxModal } from '../modals/ArtLightboxModal';
-import { Eye, ArrowUpRight, Instagram, Sparkles } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 export const ArtGallery = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -20,11 +20,11 @@ export const ArtGallery = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
+        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
       >
         <div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-theme-text font-normal tracking-tight">
-            Art & <span className="font-display text-theme-accent font-light">Fine Sketches</span>
+          <h2 className="font-label text-2xl sm:text-3xl text-theme-text tracking-tight">
+            Art & <span className=" text-theme-accent ">Fine Sketches</span>
           </h2>
         </div>
         <div className="space-y-2 max-w-xs">
@@ -35,7 +35,7 @@ export const ArtGallery = () => {
             href="https://www.instagram.com/linesbyakhileswar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-label text-[11px] uppercase tracking-widest text-theme-accent hover:underline group"
+            className="inline-flex items-center gap-2 font-label text-[12px] uppercase tracking-widest text-theme-accent hover:underline group"
           >
             <Instagram className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
             <span>@linesbyakhileswar</span>
@@ -73,7 +73,7 @@ export const ArtGallery = () => {
       {/* Artworks Editorial Grid */}
       <motion.div
         layout
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
       >
         <AnimatePresence>
           {filteredArtworks.map((artwork) => (
@@ -94,29 +94,17 @@ export const ArtGallery = () => {
                   src={artwork.image}
                   alt={artwork.title}
                   loading="lazy"
-                  className="w-full h-full object-cover object-center grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-
-                {/* Subtle Hover Overlay */}
-                <div className="absolute inset-0 bg-theme-bg/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="p-3 bg-theme-card/90 backdrop-blur-md border border-theme-border text-theme-accent transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-md">
-                    <Eye className="w-5 h-5" />
-                  </div>
-                </div>
-
-                {/* Category Badge */}
-                <div className="absolute top-3 left-3 px-2.5 py-1 bg-theme-bg/90 backdrop-blur-sm border border-theme-border font-label text-[9px] uppercase tracking-widest text-theme-text group-hover:border-theme-accent/60 transition-colors">
-                  {artwork.category}
-                </div>
               </div>
 
               {/* Artwork Caption Box */}
-              <div className="p-5 space-y-2 border-t border-theme-border/60">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-serif text-xl text-theme-text font-normal group-hover:text-theme-accent transition-colors">
+              <div className="p-4 sm:p-5 space-y-1.5 border-t border-theme-border/60">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="font-label text-lg sm:text-xl text-theme-text font-normal leading-snug group-hover:text-theme-accent transition-colors">
                     {artwork.title}
                   </h3>
-                  <span className="font-label text-[10px] text-theme-muted-accent uppercase tracking-widest">
+                  <span className="font-label text-[10px] text-theme-muted-accent uppercase tracking-widest flex-shrink-0 mt-1">
                     {artwork.year}
                   </span>
                 </div>
