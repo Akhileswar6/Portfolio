@@ -83,8 +83,8 @@ export const Contact = () => {
           className="lg:col-span-5 space-y-10"
         >
           <div>
-            <h2 className="font-serif text-3xl sm:text-4xl text-theme-text font-normal tracking-tight leading-tight">
-              Let's Create <span className="font-display text-theme-accent font-light">Something</span> Meaningful.
+            <h2 className="font-label text-2xl sm:text-3xl text-theme-text tracking-tight leading-tight">
+              Let's Create <span className="text-theme-accent ">Something</span> Meaningful
             </h2>
           </div>
 
@@ -176,7 +176,7 @@ export const Contact = () => {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-7 bg-theme-card border border-theme-border p-8 sm:p-12 relative shadow-subtle hover:border-theme-accent/50 transition-colors duration-500"
         >
-          <h3 className="font-serif text-2xl sm:text-3xl text-theme-text font-normal mb-8 pb-4 border-b border-theme-border/60">
+          <h3 className="font-label text-xl sm:text-2xl text-theme-text tracking-tight mb-8 pb-4 border-b border-theme-border/60">
             Transmit an Inquiry
           </h3>
 

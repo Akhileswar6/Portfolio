@@ -45,7 +45,7 @@ export const workExperienceData = [
   {
     id: 'flyrank-ai',
     role: 'Backend AI Engineer Intern',
-    organization: 'FlyRank',
+    organization: 'FlyRank AI',
     location: 'Tirupati, India • Remote',
     period: 'July 2026 — August 2026',
     current: false,
