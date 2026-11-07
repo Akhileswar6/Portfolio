@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Github, Linkedin, Instagram, Code2, Heart } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -10,10 +10,10 @@ export const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/Akhileswar6', icon: Github },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/akhileswar-kamale/', icon: Linkedin },
-    { name: 'Instagram', href: 'https://www.instagram.com/linesbyakhileswar/', icon: Instagram },
-    { name: 'LeetCode', href: 'https://leetcode.com/u/Akhileswar6/', icon: Code2 },
+    { name: 'GitHub', href: 'https://github.com/Akhileswar6', iconSrc: '/icons/github (3).png' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/akhileswar-kamale/', iconSrc: '/icons/linkedin (1).png' },
+    { name: 'Instagram', href: 'https://www.instagram.com/linesbyakhileswar/', iconSrc: '/icons/instagram (1).png' },
+    { name: 'LeetCode', href: 'https://leetcode.com/u/Akhileswar6/', iconSrc: '/icons/leetcode.png' },
   ];
 
   return (
@@ -23,9 +23,9 @@ export const Footer = () => {
         <div className="space-y-3 max-w-md">
           <div className="flex items-center">
             <span className=" bg-theme-border" />
-            <span className="font-label text-md uppercase font-bold tracking-widest text-theme-accent">Akhileswar Kamale</span>
+            <span className="font-label text-lg uppercase font-semibold tracking-wider text-theme-accent">Akhileswar Kamale</span>
           </div>
-          <p className="font-serif text-base text-theme-text-secondary leading-relaxed">
+          <p className="font-label text-base text-theme-text-secondary tracking-tight">
             Engineering with computational rigor. Designing with fine art intuition.
           </p>
           <p className="font-label text-[11px] uppercase tracking-widest text-theme-muted-accent">
@@ -34,22 +34,25 @@ export const Footer = () => {
         </div>
 
         {/* Center: Social Channels - 4 in a Column */}
-        <div className="flex flex-col gap-3">
-          {socialLinks.map((item) => {
-            const Icon = item.icon;
-            return (
-              <a
-                key={item.name}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2.5 font-label text-xs uppercase tracking-widest text-theme-text-secondary hover:text-theme-text transition-colors"
-              >
-                <Icon className="w-4 h-4 text-theme-muted-accent group-hover:text-theme-text transition-colors" />
-                <span>{item.name}</span>
-              </a>
-            );
-          })}
+        <div className="flex flex-col gap-3.5">
+          {socialLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 font-label text-xs  uppercase tracking-widest text-theme-text-secondary hover:text-theme-text transition-colors"
+            >
+              <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+                <img
+                  src={item.iconSrc}
+                  alt={item.name}
+                  className="w-5 h-5 object-contain group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <span className="group-hover:text-theme-accent transition-colors">{item.name}</span>
+            </a>
+          ))}
         </div>
 
         {/* Right: Back to Top & Copyright */}
@@ -61,7 +64,7 @@ export const Footer = () => {
             <span>Back to Summit</span>
             <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-1 transition-transform" />
           </button>
-          <span className="font-label text-[11px] text-theme-text-secondary tracking-widest">
+          <span className="font-label text-[13px] text-theme-muted-accent ">
             © {new Date().getFullYear()} Akhileswar Kamale. Crafted with React & Tailwind.
           </span>
         </div>

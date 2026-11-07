@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Instagram, Code2, Sparkles, MoveRight } from 'lucide-react';
+import { ArrowDown, Sparkles, MoveRight } from 'lucide-react';
 import { MagneticButton } from '../common/MagneticButton';
 
 export const Hero = () => {
@@ -21,10 +21,10 @@ export const Hero = () => {
   }, [roles.length]);
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/Akhileswar6', icon: Github },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/akhileswar-kamale/', icon: Linkedin },
-    { name: 'Instagram', href: 'https://www.instagram.com/linesbyakhileswar/', icon: Instagram },
-    { name: 'LeetCode', href: 'https://leetcode.com/u/Akhileswar6/', icon: Code2 },
+    { name: 'GitHub', href: 'https://github.com/Akhileswar6', iconSrc: '/icons/github (3).png' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/akhileswar-kamale/', iconSrc: '/icons/linkedin (1).png' },
+    { name: 'Instagram', href: 'https://www.instagram.com/linesbyakhileswar/', iconSrc: '/icons/instagram (1).png' },
+    { name: 'LeetCode', href: 'https://leetcode.com/u/Akhileswar6/', iconSrc: '/icons/leetcode.png' },
   ];
 
   const handleScrollTo = (id) => {
@@ -91,7 +91,7 @@ export const Hero = () => {
               transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="h-[1px] bg-theme-accent block"
             />
-            <span className="font-label text-xs uppercase tracking-widest-luxury text-theme-accent font-medium">
+            <span className="font-label text-xs uppercase tracking-widest text-theme-accent font-medium">
               Hello, I'm
             </span>
           </motion.div>
@@ -102,7 +102,7 @@ export const Hero = () => {
               variants={headlineVariants}
               initial="hidden"
               animate="visible"
-              className="font-serif text-5xl sm:text-5xl lg:text-5xl  text-theme-text font-normal leading-[1.05] overflow-hidden flex flex-wrap gap-x-4 gap-y-1"
+              className="font-label text-3xl sm:text-4xl lg:text-5xl  text-theme-text font-normal  tracking-tighter overflow-hidden flex flex-wrap gap-x-4 gap-y-1"
             >
               <span className="inline-flex">
                 {titleFirstName.split('').map((char, index) => (
@@ -111,7 +111,7 @@ export const Hero = () => {
                   </motion.span>
                 ))}
               </span>
-              <span className="inline-flex font-display font-light text-theme-accent">
+              <span className="inline-flex font-label text-theme-accent tracking-tighter">
                 {titleLastName.split('').map((char, index) => (
                   <motion.span key={index} variants={charVariants} className="inline-block">
                     {char}
@@ -132,7 +132,7 @@ export const Hero = () => {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -24, opacity: 0 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="font-label text-lg sm:text-xl text-theme-accent  font-medium"
+                  className="font-label text-lg sm:text-xl text-theme-accent"
                 >
                   {roles[currentRoleIndex]}
                 </motion.div>
@@ -170,6 +170,32 @@ export const Hero = () => {
             >
               <span>Let's Connect</span>
             </MagneticButton>
+          </motion.div>
+
+          {/* Social Channels with Authentic Icons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="flex items-center gap-4 sm:gap-5 pt-4"
+          >
+            {socialLinks.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={item.name}
+                aria-label={item.name}
+                className="group flex items-center justify-center p-1 transition-all duration-300 hover:scale-115"
+              >
+                <img
+                  src={item.iconSrc}
+                  alt={item.name}
+                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain transition-transform duration-300 drop-shadow-sm group-hover:scale-110"
+                />
+              </a>
+            ))}
           </motion.div>
         </div>
 
@@ -213,8 +239,7 @@ export const Hero = () => {
               className="relative w-full flex justify-center"
             >
               <img
-                src="./profile.png"
-                onError={(e) => { e.currentTarget.src = './assets/profile.png'; }}
+                src="./assets/profile.png"
                 alt="Akhileswar Kamale"
                 className="w-full max-h-[520px] object-contain drop-shadow-2xl hover:scale-[1.03] transition-transform duration-500 ease-out select-none"
               />
