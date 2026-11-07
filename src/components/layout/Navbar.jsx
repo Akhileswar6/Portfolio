@@ -77,10 +77,10 @@ export const Navbar = () => {
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="group flex items-baseline gap-2 text-theme-text hover:text-theme-accent transition-colors"
+            className="group flex items-center text-theme-text hover:text-theme-accent transition-colors"
           >
-            <span className="hidden sm:inline-block font-label font-semibold text-[14px] tracking-widest-luxury uppercase text-theme-text-secondary group-hover:text-theme-accent transition-colors">
-              Developer <span className="text-theme-accent">×</span> Artist
+            <span className="font-label font-semibold text-[16px] sm:text-[18px] tracking-wider uppercase text-theme-text-secondary group-hover:text-theme-accent transition-colors">
+              Developer <span className="text-theme-accent">X</span> Artist
             </span>
           </a>
 
@@ -93,7 +93,7 @@ export const Navbar = () => {
                   key={link.id}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`relative font-label text-xs uppercase tracking-widest py-1 transition-colors duration-200 ${
+                  className={`relative font-label text-xs uppercase tracking-wider py-1 transition-colors duration-200 ${
                     isActive ? 'text-theme-accent font-medium' : 'text-theme-text-secondary hover:text-theme-text'
                   }`}
                 >
@@ -160,8 +160,8 @@ export const Navbar = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.05 }}
-                  className={`font-serif text-3xl tracking-tight transition-colors ${
-                    activeSection === link.id ? 'text-theme-accent italic' : 'text-theme-text'
+                  className={`font-label text-2xl tracking-tight transition-colors ${
+                    activeSection === link.id ? 'text-theme-accent' : 'text-theme-text'
                   }`}
                 >
                   {link.name}
@@ -176,12 +176,10 @@ export const Navbar = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-between py-3 px-5 border border-theme-border text-theme-text font-label text-xs uppercase tracking-widest hover:border-theme-accent hover:text-theme-accent"
               >
-                <span>Download Curriculum Vitae</span>
+                <span>Resume</span>
                 <Download className="w-4 h-4 text-theme-accent" />
               </a>
-              <p className="font-label text-[11px] text-theme-text-secondary tracking-widest">
-                Tirupati, India • Available for Full-Stack & Creative Engineering
-              </p>
+              
             </div>
           </motion.div>
         )}

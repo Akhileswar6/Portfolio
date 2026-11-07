@@ -12,10 +12,10 @@ export const Education = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20"
+        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
       >
         <div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-theme-text font-normal tracking-tight">
+          <h2 className="font-label text-2xl sm:text-3xl text-theme-text tracking-tight">
             Education 
           </h2>
         </div>
@@ -67,7 +67,7 @@ export const Education = () => {
 
               {/* Degrees & Institution */}
               <div className="space-y-2">
-                <h3 className="font-serif text-2xl sm:text-2xl text-theme-text font-normal leading-snug group-hover:text-theme-accent transition-colors">
+                <h3 className="font-label text-2xl sm:text-2xl text-theme-text font-normal leading-snug  transition-colors">
                   {edu.degree}
                 </h3>
                 <p className="font-label text-lg text-theme-accent">

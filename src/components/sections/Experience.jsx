@@ -12,12 +12,12 @@ export const Experience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20"
+        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
       >
         <div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-theme-text font-normal">
+          <h2 className="font-label text-2xl sm:text-3xl text-theme-text font-normal tracking-tight">
             Work Experience 
-          </h2>
+          </h2> 
         </div>
         
       </motion.div>
@@ -47,11 +47,11 @@ export const Experience = () => {
                   </span>
                 </div>
 
-                 <p className="font-serif text-xl text-theme-accent">
+                 <p className="font-label text-xl text-theme-accent">
                   {item.organization}
                 </p>
 
-                <h3 className="font-label text-2xl sm:text-3xl text-theme-text font-normal group-hover:text-theme-accent transition-colors">
+                <h3 className="font-label text-xl sm:text-2xl text-theme-text font-normal  transition-colors">
                   {item.role}
                 </h3>
 

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { skillsCategories } from '../../data/skillsData';
+import { allSkills, skillsCategories } from '../../data/skillsData';
 import { certificationsData } from '../../data/experienceData';
+import { TechIcon } from '../common/TechIcon';
 import { Award, ExternalLink, Sparkles } from 'lucide-react';
 
 export const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState(skillsCategories[0].id);
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  const selectedCategory = skillsCategories.find(c => c.id === activeCategory) || skillsCategories[0];
+  const filteredSkills = activeCategory === 'all'
+    ? allSkills
+    : allSkills.filter(s => s.category === activeCategory);
 
   return (
     <section id="skills" className="py-28 px-6 md:px-12 max-w-7xl mx-auto border-t border-theme-border/60">
@@ -17,11 +20,11 @@ export const Skills = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
+        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
       >
         <div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-theme-text font-normal tracking-tight">
-            Technical Stack & <span className="font-display text-theme-accent">Craftsmanship</span>
+          <h2 className="font-label text-2xl sm:text-3xl text-theme-text font-normal tracking-tight">
+            Technical Stack & <span className="font-label text-theme-accent">Craftsmanship</span>
           </h2>
         </div>
       </motion.div>
@@ -53,10 +56,8 @@ export const Skills = () => {
         })}
       </div>
 
-      {/* Skills Grid */}
+      {/* Skills Grid - Compact Tiles */}
       <div className="mb-20">
-        
-
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
@@ -64,46 +65,28 @@ export const Skills = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"
           >
-            {selectedCategory.skills.map((skill, idx) => (
+            {filteredSkills.map((skill, idx) => (
               <motion.div
                 key={skill.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{ y: -4, transition: { duration: 0.25 } }}
-                className="p-6 bg-theme-card border border-theme-border hover:border-theme-accent/70 transition-all duration-300 group flex flex-col justify-between shadow-subtle hover:shadow-md"
+                transition={{ duration: 0.4, delay: idx * 0.03, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                className="p-3 sm:p-3.5 bg-theme-card border border-theme-border hover:border-theme-accent/70 transition-all duration-300 group flex items-center gap-3 shadow-subtle hover:shadow-md cursor-default overflow-hidden"
               >
-                <div className="space-y-2">
-                  <div className="flex items-start justify-between gap-3">
-                    <h4 className="font-serif text-2xl text-theme-text font-normal group-hover:text-theme-accent transition-colors">
-                      {skill.name}
-                    </h4>
-                    {skill.highlight && (
-                      <span className="font-label text-[9px] uppercase tracking-widest px-2 py-0.5 border border-theme-accent/40 text-theme-accent group-hover:border-theme-accent transition-colors flex-shrink-0 mt-1">
-                        Core Tech
-                      </span>
-                    )}
-                  </div>
+                <div className="w-9 h-9 flex items-center justify-center p-1.5 rounded bg-theme-bg-secondary border border-theme-border group-hover:border-theme-accent/60 transition-colors flex-shrink-0">
+                  <TechIcon
+                    name={skill.name}
+                    icon={skill.icon}
+                    className="w-5 h-5 sm:w-5.5 sm:h-5.5 group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
-                {/* Animated luxury progress line */}
-                <div className="pt-6 space-y-1.5">
-                  <div className="flex justify-between items-center font-label text-[10px] uppercase tracking-widest text-theme-text-secondary">
-                    <span>Proficiency</span>
-                    <span className="group-hover:text-theme-accent transition-colors font-medium">{skill.level}</span>
-                  </div>
-                  <div className="w-full h-[2px] bg-theme-border/60 overflow-hidden rounded-full">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: skill.level }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.9, delay: 0.1 + idx * 0.04, ease: [0.16, 1, 0.3, 1] }}
-                      className="h-full bg-theme-accent"
-                    />
-                  </div>
-                </div>
+                <h4 className="font-label text-sm sm:text-base text-theme-text font-normal group-hover:text-theme-accent transition-colors truncate">
+                  {skill.name}
+                </h4>
               </motion.div>
             ))}
           </motion.div>
@@ -123,7 +106,7 @@ export const Skills = () => {
             <span className="font-label text-xs uppercase tracking-widest text-theme-accent block mb-1">
               Verified Credentials
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl text-theme-text font-normal">
+            <h3 className="font-label text-2xl sm:text-3xl text-theme-text tracking-tight">
               Industry Certifications
             </h3>
           </div>
@@ -148,7 +131,7 @@ export const Skills = () => {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
                 />
                 <div className="absolute inset-0 bg-theme-bg/10 group-hover:bg-transparent transition-colors duration-300" />
               </div>
@@ -161,7 +144,7 @@ export const Skills = () => {
                       {cert.issuer} • {cert.year}
                     </span>
                   </div>
-                  <h4 className="font-serif text-xl sm:text-xl text-theme-text font-medium leading-snug group-hover:text-theme-accent transition-colors">
+                  <h4 className="font-label text-xl sm:text-xl text-theme-text font-medium leading-snug group-hover:text-theme-accent transition-colors">
                     {cert.title}
                   </h4>
                 </div>

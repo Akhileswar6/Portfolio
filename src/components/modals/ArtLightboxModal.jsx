@@ -63,7 +63,7 @@ export const ArtLightboxModal = ({ artwork, onClose }) => {
                 <span className="font-label text-xs uppercase tracking-widest text-theme-accent block mb-1">
                   {artwork.category} • {artwork.year}
                 </span>
-                <h3 className="font-serif text-3xl sm:text-4xl text-theme-text font-normal leading-tight">
+                <h3 className="font-label text-3xl sm:text-2xl text-theme-text font-normal leading-tight">
                   {artwork.title}
                 </h3>
               </div>
@@ -90,7 +90,7 @@ export const ArtLightboxModal = ({ artwork, onClose }) => {
                   <span className="text-theme-text-secondary uppercase font-label tracking-widest text-[10px]">
                     Signature
                   </span>
-                  <span className="text-theme-accent font-serif italic">
+                  <span className="text-theme-accent font-label">
                     Akhileswar Kamale
                   </span>
                 </div>
@@ -98,11 +98,11 @@ export const ArtLightboxModal = ({ artwork, onClose }) => {
 
               {/* Description */}
               <div className="space-y-2">
-                <h4 className="font-label text-xs uppercase tracking-widest text-theme-accent">
+                <h4 className="font-label text-xs uppercase tracking-widest">
                   Artist's Note
                 </h4>
-                <p className="font-serif text-base italic text-theme-text-secondary leading-relaxed font-light">
-                  "{artwork.description}"
+                <p className="font-label text-sm text-theme-text-secondary leading-relaxed">
+                  {artwork.description}
                 </p>
               </div>
 
@@ -127,7 +127,7 @@ export const ArtLightboxModal = ({ artwork, onClose }) => {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-3 bg-theme-bg-secondary border border-theme-border hover:border-theme-accent text-theme-text hover:text-theme-accent font-label text-xs uppercase tracking-widest transition-colors"
               >
-                <span>View More on Instagram</span>
+                <span>More on Instagram</span>
                 <span className="text-theme-accent">@linesbyakhileswar</span>
               </a>
             </div>

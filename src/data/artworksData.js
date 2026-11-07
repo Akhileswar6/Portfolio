@@ -2,88 +2,86 @@ export const artCategories = [
   'All',
   'Sketches',
   'Realistic Art',
-  'Devotional Art',
-  'Creative Experiments'
+  'Devotional Art'
 ];
 
 export const artworksData = [
   {
-    id: 'art-01',
-    title: 'Anatomy of Reflection',
-    category: 'Sketches',
-    medium: 'Graphite & Charcoal on 220gsm Cartridge Paper',
+    id: 'art-akhil',
+    title: 'Akhileswar',
+    category: 'Realistic Art',
+    medium: 'Pencil & Charcoal on Archival Paper',
+    year: '2025',
+    dimensions: 'A3 (297 × 420 mm)',
+    aspectRatio: 'aspect-[4/5]',
+    description: 'A study in realistic portraiture capturing tonal gradations, authentic facial proportions, and fine pencil textures.',
+    image: './arts/akhil.webp',
+    featured: true,
+    tags: ['Realistic Art', 'Portrait', 'Pencil', 'Fine Art']
+  },
+  {
+    id: 'art-bappa',
+    title: 'Lord Ganesha',
+    category: 'Devotional Art',
+    medium: 'Devotional Charcoal & Graphite Art',
+    year: '2026',
+    dimensions: 'A3 (297 × 420 mm)',
+    aspectRatio: 'aspect-[4/5]',
+    description: 'Sacred rendering of Lord Ganesha portraying divine aura, delicate ornamentation, and meditative devotion.',
+    image: './arts/bappa.webp',
+    featured: true,
+    tags: ['Devotional Art', 'Ganesha', 'Spiritual', 'Sacred']
+  },
+  {
+    id: 'art-durga-devi',
+    title: 'Goddess Durga Devi',
+    category: 'Devotional Art',
+    medium: 'Sacred Graphite & Intricate Detailing',
+    year: '2025',
+    dimensions: 'A3 (297 × 420 mm)',
+    aspectRatio: 'aspect-[4/5]',
+    description: 'Majestic devotional representation of Goddess Durga Devi embodying strength, grace, and sacred reverence.',
+    image: './arts/durga_devi.webp',
+    featured: true,
+    tags: ['Devotional Art', 'Durga Devi', 'Divine', 'Traditional']
+  },
+  {
+    id: 'art-hanuman',
+    title: 'Lord Hanuman',
+    category: 'Devotional Art',
+    medium: 'Deep Charcoal & Shading',
     year: '2026',
     dimensions: 'A3 (297 × 420 mm)',
     aspectRatio: 'aspect-[3/4]',
-    description: 'A study of anatomical tension, natural light falloff, and chiaroscuro pencil grading. Rendered through patient layering of 2B to 8B graphite pencils.',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1000&auto=format&fit=crop',
+    description: 'Devotional artwork capturing the resolute expression, strength, and unwavering faith of Lord Hanuman.',
+    image: './arts/hanuman.webp',
     featured: true,
-    tags: ['Graphite', 'Portraiture', 'Contrast', 'Fine Art']
+    tags: ['Devotional Art', 'Hanuman', 'Strength', 'Devotion']
   },
   {
-    id: 'art-02',
-    title: 'Divine Serenades',
-    category: 'Devotional Art',
-    medium: 'Mixed Media & Digital Ink',
-    year: '2026',
-    dimensions: 'Digital 4K (3840 × 2160 px)',
-    aspectRatio: 'aspect-[4/5]',
-    description: 'An evocative devotional artwork blending ancient temple iconography with contemporary minimalist line strokes and gold leaf textures.',
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1000&auto=format&fit=crop',
-    featured: true,
-    tags: ['Devotional', 'Gold Accents', 'Spiritual', 'Texture']
-  },
-  {
-    id: 'art-03',
-    title: 'Hyper-Realistic Gaze',
-    category: 'Realistic Art',
-    medium: 'Charcoal & Blending Stumps',
-    year: '2025',
-    dimensions: 'A2 (420 × 594 mm)',
-    aspectRatio: 'aspect-[3/4]',
-    description: 'Micro-detail rendering of human expression, iris depth, and skin texture. Completed across 42 hours of focused manual drafting.',
-    image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?q=80&w=1000&auto=format&fit=crop',
-    featured: true,
-    tags: ['Hyperrealism', 'Charcoal', 'Detail', 'Patience']
-  },
-  {
-    id: 'art-05',
-    title: 'Silent Temple Courtyard',
-    category: 'Devotional Art',
-    medium: 'Ink Wash & Micron Pens',
-    year: '2025',
-    dimensions: '300 × 400 mm',
-    aspectRatio: 'aspect-[4/5]',
-    description: 'Architectural reverence depicting the stone pillars and rhythmic shadows of South Indian historic temple sanctums.',
-    image: 'https://images.unsplash.com/photo-1582560475093-ba66accbc424?q=80&w=1000&auto=format&fit=crop',
-    featured: false,
-    tags: ['Architecture', 'Heritage', 'Ink Wash', 'Sacred']
-  },
-  {
-    id: 'art-06',
-    title: 'Algorithmic Flow: Entropy',
-    category: 'Creative Experiments',
-    medium: 'Generative Canvas & Hand-Finished Glaze',
-    year: '2026',
-    dimensions: 'Variable Resolution',
-    aspectRatio: 'aspect-[16/10]',
-    description: 'Parametric mathematics translated into organic liquid topography, creating a tactile bridge between source code and artistic expression.',
-    image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop',
-    featured: true,
-    tags: ['Generative', 'Experimental', 'Fluid', 'Code Art']
-  },
-  {
-    id: 'art-07',
-    title: 'Lines of Solitude',
+    id: 'art-hanuman1',
+    title: 'Lord Hanuman',
     category: 'Sketches',
-    medium: '0.3mm Fine Liner on Heavy Vellum',
-    year: '2025',
+    medium: 'Freehand Graphite Sketch',
+    year: '2026',
     dimensions: 'A4 (210 × 297 mm)',
-    aspectRatio: 'aspect-[3/4]',
-    description: 'Cross-hatching exploration of solitary posture and emotional weight, inspired by classical renaissance sketchbooks.',
-    image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1000&auto=format&fit=crop',
-    featured: false,
-    tags: ['Cross-hatching', 'Minimal', 'Line Art', 'Intimate']
+    aspectRatio: 'aspect-[4/5]',
+    description: 'Expressive and energetic sketch illustrating dynamic linework, bold anatomy, and classical form.',
+    image: './arts/hanuman1.webp',
+    featured: true,
+    tags: ['Sketches', 'Hanuman', 'Line Art', 'Graphite']
+  },
+  {
+    id: 'art-pawan-kalyan',
+    title: 'Pawan Kalyan',
+    category: 'Realistic Art',
+    medium: 'Realistic Charcoal & Pencil Sketch',
+    year: '2023',
+    dimensions: 'A3 (297 × 420 mm)',
+    aspectRatio: 'aspect-[4/5]',
+    description: 'Detailed realistic portrait study capturing striking likeness, expressive eyes, and nuanced light shading.',
+    image: './arts/pawan_kalyan.webp',
+    featured: true,
+    tags: ['Realistic Art', 'Pawan Kalyan', 'Portrait', 'Charcoal']
   }
 ];
-

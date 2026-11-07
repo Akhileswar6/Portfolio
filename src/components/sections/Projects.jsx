@@ -16,11 +16,11 @@ export const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20"
+        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
       >
         <div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-theme-text font-normal tracking-tight">
-            Featured Projects & <span className="font-display text-theme-accent ">Case Studies</span>
+          <h2 className="font-label text-2xl sm:text-3xl text-theme-text font-normal tracking-tight">
+            Featured Projects & <span className=" text-theme-accent ">Case Studies</span>
           </h2>
         </div>
       </motion.div>
@@ -53,7 +53,7 @@ export const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-auto block object-contain grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-700 ease-out"
+                    className="w-full h-auto block object-contain group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   />
                 </div>
               </motion.div>
@@ -67,7 +67,7 @@ export const Projects = () => {
                 <div className="space-y-2">
                   <h3
                     onClick={() => setSelectedProject(project)}
-                    className="font-serif text-2xl sm:text-3xl text-theme-text font-normal tracking-wide hover:text-theme-accent transition-colors cursor-pointer"
+                    className="font-label text-xl sm:text-2xl text-theme-text font-normal  hover:text-theme-accent transition-colors cursor-pointer"
                   >
                     {project.title}
                   </h3>
