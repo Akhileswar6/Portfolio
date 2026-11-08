@@ -25,6 +25,8 @@ const iconPathMap = {
   'React.js': '/icons/React.png',
   'React': '/icons/React.png',
   'Tailwind CSS': '/icons/Tailwind CSS.png',
+  'TypeScript': '/icons/TypeScript.png',
+  'TS': '/icons/TypeScript.png',
 };
 
 export const TechIcon = ({ name, icon, className = 'w-6 h-6' }) => {
