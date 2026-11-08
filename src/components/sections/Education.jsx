@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { educationData } from '../../data/experienceData';
-import { GraduationCap, Award, BookOpen, Calendar, MapPin, Check, BookmarkCheck } from 'lucide-react';
+import { GraduationCap, MapPin } from 'lucide-react';
 
 export const Education = () => {
   return (
@@ -41,7 +41,7 @@ export const Education = () => {
                     <GraduationCap className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="font-label text-[10px] uppercase tracking-widest text-theme-accent block">
+                    <span className="font-sans text-[11px] uppercase tracking-widest text-theme-accent block">
                       {edu.specialization}
                     </span>
                     <span className="font-sans text-xs text-theme-text-secondary font-light">
@@ -67,11 +67,11 @@ export const Education = () => {
 
               {/* Degrees & Institution */}
               <div className="space-y-2">
-                <h3 className="font-label text-2xl sm:text-2xl text-theme-text font-normal leading-snug  transition-colors">
-                  {edu.degree}
-                </h3>
-                <p className="font-label text-lg text-theme-accent">
+                <h2 className="font-label text-2xl sm:text-xl text-theme-text font-normal leading-snug  transition-colors">
                   {edu.institution}
+                </h2>
+                <p className="font-sans text-lg text-theme-accent">
+                  {edu.degree}
                 </p>
                 <div className="flex items-center gap-2 font-sans text-xs text-theme-text-secondary pt-1 font-light">
                   <MapPin className="w-3.5 h-3.5 text-theme-accent" />
@@ -83,21 +83,6 @@ export const Education = () => {
               <p className="font-sans text-sm text-theme-text-secondary leading-relaxed font-light">
                 {edu.description}
               </p>
-
-              {/* Key Scholarly Highlights */}
-              <div className="space-y-2.5 pt-2">
-                <span className="font-label text-[10px] uppercase tracking-widest text-theme-accent block font-medium">
-                  Scholarly Highlights
-                </span>
-                <ul className="space-y-2">
-                  {edu.highlights.map((hl, hIdx) => (
-                    <li key={hIdx} className="flex items-start gap-2.5 font-sans text-xs text-theme-text-secondary font-light">
-                      <BookmarkCheck className="w-4 h-4 text-theme-accent flex-shrink-0 mt-0.5 group-hover:text-theme-accent transition-colors" />
-                      <span>{hl}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
 
             {/* Core Coursework Matrix */}

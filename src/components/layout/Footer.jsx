@@ -25,10 +25,10 @@ export const Footer = () => {
             <span className=" bg-theme-border" />
             <span className="font-label text-lg uppercase font-semibold tracking-wider text-theme-accent">Akhileswar Kamale</span>
           </div>
-          <p className="font-label text-base text-theme-text-secondary tracking-tight">
+          <p className="font-sans text-base text-theme-text-secondary tracking-tight">
             Engineering with computational rigor. Designing with fine art intuition.
           </p>
-          <p className="font-label text-[11px] uppercase tracking-widest text-theme-muted-accent">
+          <p className="font-sans text-[11px] uppercase tracking-widest text-theme-muted-accent">
             Based in Tirupati, India • Open for Global Remote Roles
           </p>
         </div>

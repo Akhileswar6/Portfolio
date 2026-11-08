@@ -101,7 +101,7 @@ export const ArtLightboxModal = ({ artwork, onClose }) => {
                 <h4 className="font-label text-xs uppercase tracking-widest">
                   Artist's Note
                 </h4>
-                <p className="font-label text-sm text-theme-text-secondary leading-relaxed">
+                <p className="font-sans text-sm text-theme-text-secondary leading-relaxed">
                   {artwork.description}
                 </p>
               </div>
@@ -111,7 +111,7 @@ export const ArtLightboxModal = ({ artwork, onClose }) => {
                 {artwork.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="font-label text-[10px] uppercase tracking-widest px-2.5 py-1 border border-theme-border text-theme-text-secondary"
+                    className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-1 border border-theme-border text-theme-text-secondary"
                   >
                     #{tag}
                   </span>

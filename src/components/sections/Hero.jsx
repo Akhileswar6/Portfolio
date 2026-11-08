@@ -146,7 +146,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="text-theme-text-secondary text-base sm:text-lg max-w-xl leading-relaxed font-sans font-light"
           >
-            A full-stack software engineer with a fine-art background, building scalable web systems, backend AI agents, and cyber-secure digital experiences with uncompromising craftsmanship.
+            A full-stack software engineer with a fine-art background, building scalable web systems, and cyber-secure digital experiences with uncompromising craftsmanship.
           </motion.p>
 
           {/* CTA Buttons */}
