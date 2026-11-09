@@ -7,7 +7,7 @@ import { AnimatedCounter } from '../common/AnimatedCounter';
 export const About = () => {
   const stats = [
     { number: '9.13', label: 'B.Tech CGPA', detail: 'CSE (Cyber Security)' },
-    { number: '15+', label: 'Projects Built', detail: 'Full Stack & AI' },
+    { number: '5+', label: 'Projects Built', detail: 'Full Stack & AI' },
     { number: '50+', label: 'Artworks Drafted', detail: 'Sketches & Digital' },
     { number: '04', label: 'Global Certifications', detail: 'GitHub, OCI, Cisco' }
   ];
