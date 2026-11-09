@@ -87,9 +87,9 @@ export const Certifications = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Show PDF"
-                      className="inline-flex items-center gap-1.5 text-[11px] font-sans uppercase tracking-wider text-theme-accent hover:underline transition-colors flex-shrink-0 font-medium"
+                      className="inline-flex items-center gap-1.5 text-[10px] font-sans uppercase tracking-wider text-theme-accent hover:underline transition-colors flex-shrink-0 font-medium"
                     >
-                      <span>Show PDF</span>
+                      <span>Verify</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
