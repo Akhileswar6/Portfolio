@@ -120,7 +120,7 @@ export const Navbar = () => {
               href="./assets/Akhileswar_Kamale_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-label uppercase tracking-widest border border-theme-border hover:border-theme-accent text-theme-text hover:text-theme-accent transition-all duration-300"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-sans uppercase tracking-wide border border-theme-border hover:border-theme-accent text-theme-text hover:text-theme-accent transition-all duration-300"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Resume</span>
