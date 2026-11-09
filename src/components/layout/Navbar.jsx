@@ -93,7 +93,7 @@ export const Navbar = () => {
                   key={link.id}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`relative font-label text-xs uppercase tracking-wider py-1 transition-colors duration-200 ${
+                  className={`relative font-sans text-xs uppercase tracking-wide py-1 transition-colors duration-200 ${
                     isActive ? 'text-theme-accent font-medium' : 'text-theme-text-secondary hover:text-theme-text'
                   }`}
                 >
@@ -160,7 +160,7 @@ export const Navbar = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.05 }}
-                  className={`font-label text-2xl tracking-tight transition-colors ${
+                  className={`font-sans text-lg tracking-wide transition-colors ${
                     activeSection === link.id ? 'text-theme-accent' : 'text-theme-text'
                   }`}
                 >

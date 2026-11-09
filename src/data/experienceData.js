@@ -73,11 +73,7 @@ export const workExperienceData = [
     current: false,
     tagline: 'High-Impact Community Engineering & Component Architecture',
     description: 'Selected as an official open-source contributor among thousands of applicants to build, test, and refine high-impact community repositories.',
-    responsibilities: [
-      'Submitted reviewed pull requests addressing performance bottlenecks and accessibility issues in React/Node codebases.',
-      'Mentored emerging contributors on Git collaboration, atomic pull requests, and CI/CD best practices.',
-      'Refactored frontend component libraries to achieve strict WCAG AA compliance standards.'
-    ],
+    responsibilities: ['Contributed to GirlScript Summer of Code (GSSoC) by collaborating on open-source projects, improving code quality, and implementing community-driven enhancements through GitHub pull requests.'],
     tech: ['React.js', 'JavaScript', 'Git', 'GitHub Actions', 'Open Source', 'Code Review'],
     badge: 'Selected Contributor',
     metrics: [
@@ -100,7 +96,7 @@ export const educationData = [
     current: true,
     scoreType: 'CGPA Distinction',
     score: '9.13 / 10.0',
-    description: 'Advanced collegiate curriculum specializing in defensive systems, cryptographic protocols, distributed architecture, and resilient web infrastructure.',
+    description: 'Studying computer science fundamentals with a specialization in cybersecurity, focusing on programming, database management, networking basics, and information security.',
     highlights: [
       'Maintained consistent semester academic distinction with a 9.13 Cumulative Grade Point Average.',
       'Conducted vulnerability testing simulations, web exploitation labs, and threat model analysis.',
@@ -126,7 +122,7 @@ export const educationData = [
     current: false,
     scoreType: 'Aggregate Percentage',
     score: '82.44%',
-    description: 'Rigorous 3-year foundational technical training spanning low-level computing, object-oriented systems, and relational databases.',
+    description: 'Completed a three-year Diploma in Computer Engineering, gaining foundational knowledge in programming, computer hardware, operating systems, object-oriented programming, and database management.',
     highlights: [
       'Graduated with 82.44% aggregate distinction across all academic semesters.',
       'Developed student record management capstone platforms with role-based security access.',
@@ -150,7 +146,7 @@ export const certificationsData = [
     year: '2025',
     image: './assets/Certifications/Github Foundations_page-0001.jpg',
     pdf: './assets/Certifications/Github Foundations.pdf',
-    skills: 'Version Control, Actions, Collaboration, Enterprise'
+    skills: 'Git & Version Control, GitHub Repository Management, Pull Requests & Code Reviews, GitHub Actions & CI/CD, Collaboration & GitHub Flow'
   },
   {
     title: 'Oracle Cloud Infrastructure (OCI)',
@@ -158,7 +154,7 @@ export const certificationsData = [
     year: '2025',
     image: './assets/Certifications/OCI Foundations_page-0001.jpg',
     pdf: './assets/Certifications/OCI Foundations.pdf',
-    skills: 'Cloud Architecture, Identity, Virtual Networking, Storage'
+    skills: 'Cloud Computing Fundamentals, Compute & Virtual Machines, Cloud Storage & Databases, Virtual Cloud Networks (VCN), Identity & Access Management (IAM)'
   },
   {
     title: 'Cyber Security',
@@ -166,7 +162,7 @@ export const certificationsData = [
     year: '2022',
     image: './assets/Certifications/Cisco-Cyber Security_page-0001.jpg',
     pdf: './assets/Certifications/Cisco-Cyber Security.pdf',
-    skills: 'Threat Analysis, Cryptography, Defense-in-Depth, Compliance'
+    skills: 'Cybersecurity Fundamentals, Network Security Basics, Threat & Vulnerability Awareness, Phishing & Social Engineering Awareness, Data Protection & Privacy'
   },
   {
     title: 'Python Essentials',
@@ -174,7 +170,7 @@ export const certificationsData = [
     year: '2025',
     image: './assets/Certifications/Cisco-Python Essentials1_page-0001.jpg',
     pdf: './assets/Certifications/Cisco-Python Essentials1.pdf',
-    skills: 'OOP, File Processing, Data Structures, Modular Code'
+    skills: 'Python Fundamentals, Variables & Data Types, Control Flow & Loops, Functions & Modules, Data Structures, OOPS, Debugging & Exception Handling'
   }
 ];
 

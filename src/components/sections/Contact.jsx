@@ -109,7 +109,7 @@ export const Contact = () => {
                   </span>
                   <a
                     href={`mailto:${emailAddress}`}
-                    className="font-label text-base text-theme-text hover:text-theme-accent transition-colors"
+                    className="font-sans text-sm text-theme-text hover:text-theme-accent transition-colors"
                   >
                     {emailAddress}
                   </a>
@@ -142,7 +142,7 @@ export const Contact = () => {
                   <span className="font-label text-[10px] uppercase tracking-widest text-theme-text-secondary block">
                     Phone
                   </span>
-                  <a href={`tel:${phoneNumber.replace(/\s+/g, '')}`} className="font-label text-sm text-theme-text hover:text-theme-accent">
+                  <a href={`tel:${phoneNumber.replace(/\s+/g, '')}`} className="font-sans text-sm text-theme-text hover:text-theme-accent">
                     {phoneNumber}
                   </a>
                 </div>
@@ -159,7 +159,7 @@ export const Contact = () => {
                   <span className="font-label text-[10px] uppercase tracking-widest text-theme-text-secondary block">
                     Location
                   </span>
-                  <span className="font-label text-sm text-theme-text">
+                  <span className="font-sans text-sm text-theme-text">
                     {locationCity}
                   </span>
                 </div>

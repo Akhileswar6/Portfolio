@@ -80,6 +80,9 @@ export const ProjectModal = ({ project, onClose }) => {
                 <p className="font-sans text-sm sm:text-base text-theme-text-secondary leading-relaxed font-light">
                   {project.details}
                 </p>
+                <p className="font-sans text-sm sm:text-base text-theme-text-secondary leading-relaxed font-light">
+                  {project.desc}
+                </p>
               </div>
 
               <div className="lg:col-span-4 space-y-6">

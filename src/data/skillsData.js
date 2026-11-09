@@ -1,6 +1,7 @@
 export const allSkills = [
   { name: 'Python', category: 'backend', icon: '/icons/Python.png' },
   { name: 'JavaScript', category: 'frontend', icon: '/icons/JavaScript.png' },
+  { name: 'TypeScript', category: 'frontend', icon: '/icons/TypeScript.png' },
   { name: 'HTML5', category: 'frontend', icon: '/icons/HTML5.png' },
   { name: 'CSS3', category: 'frontend', icon: '/icons/CSS3.png' },
   { name: 'React.js', category: 'frontend', icon: '/icons/React.png' },

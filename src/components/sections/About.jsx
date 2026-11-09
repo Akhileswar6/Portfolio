@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, FileText } from 'lucide-react';
 import { MagneticButton } from '../common/MagneticButton';
+import { AnimatedCounter } from '../common/AnimatedCounter';
 
 export const About = () => {
   const stats = [
     { number: '9.13', label: 'B.Tech CGPA', detail: 'CSE (Cyber Security)' },
-    { number: '15+', label: 'Projects Built', detail: 'Full Stack & AI' },
+    { number: '5+', label: 'Projects Built', detail: 'Full Stack & AI' },
     { number: '50+', label: 'Artworks Drafted', detail: 'Sketches & Digital' },
     { number: '04', label: 'Global Certifications', detail: 'GitHub, OCI, Cisco' }
   ];
@@ -38,13 +39,12 @@ export const About = () => {
       >
         <div className="space-y-6 text-theme-text-secondary font-sans font-light leading-relaxed text-base sm:text-lg">
           <p>
-            I am Akhileswar Kamale, a full-stack developer and digital artist based in Tirupati, India. For me, programming and fine art are not opposing fields—they are complementary facets of the same creative drive: translating abstract ideas into tangible reality.
-          </p>
+            I am Akhileswar Kamale, a full-stack developer passionate about building web applications and solving real-world problems. Currently pursuing a B.Tech in Computer Science and Engineering (Cyber Security) at SVCE with a 9.13 CGPA, I am also working as a Full Stack Intern at Udr Crafts, continuously developing my technical skills while bringing creativity and attention to detail into every project.          </p>
           <p>
-            My engineering work is rooted in clean architectural design, microservice reliability, and modern web ergonomics using React, Node.js, and Python. Simultaneously, my hours spent sketching with graphite and charcoal have conditioned me to observe micro-details, visual hierarchy, and balance—qualities that directly influence how I craft digital interfaces.
-          </p>
+            I primarily work with the MERN stack (MongoDB, Express.js, React.js, and Node.js), along with knowledge of Python and FastAPI. I enjoy developing practical projects, exploring new technologies, and continuously improving my problem-solving and software development skills.          </p>
+         
           <p>
-            Currently interning as a Full Stack Intern at Udr Crafts and pursuing B.Tech in Computer Science and Engineering(Cyber Security) at SVCE with an academic record of 9.13 CGPA, I bring rigorous technical discipline and an artist's discerning eye to every project.
+            Beyond coding, I have a passion for art and sketching. Art has taught me patience, creativity, and attention to detail — qualities I also bring into my development work.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export const About = () => {
               className="space-y-1 group"
             >
               <span className="font-label text-2xl sm:text-3xl font-normal text-theme-accent block group-hover:scale-105 transition-transform origin-left">
-                {s.number}
+                <AnimatedCounter value={s.number} duration={1.8} delay={0.15 + idx * 0.08} />
               </span>
               <span className="font-label text-xs uppercase tracking-widest text-theme-text block font-medium">
                 {s.label}
