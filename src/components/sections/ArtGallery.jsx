@@ -13,14 +13,14 @@ export const ArtGallery = () => {
     : artworksData.filter(art => art.category === activeCategory);
 
   return (
-    <section id="art" className="py-28 px-6 md:px-12 max-w-7xl mx-auto border-t border-theme-border/60">
+    <section id="art" className="py-20 sm:py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto border-t border-theme-border/60">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
+        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10"
       >
         <div>
           <h2 className="font-label text-2xl sm:text-3xl text-theme-text tracking-tight">
@@ -44,14 +44,14 @@ export const ArtGallery = () => {
       </motion.div>
 
       {/* Category Filter Pills with Animated Active Background */}
-      <div className="flex flex-wrap items-center gap-2 pb-6 border-b border-theme-border/60 mb-12">
+      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pb-4 sm:pb-6 border-b border-theme-border/60 mb-8 sm:mb-12">
         {artCategories.map((cat) => {
           const isActive = activeCategory === cat;
           return (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`relative font-label text-xs uppercase tracking-widest px-5 py-2.5 transition-colors duration-300 border ${
+              className={`relative font-label text-[11px] sm:text-xs uppercase tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-300 border ${
                 isActive
                   ? 'border-theme-accent text-theme-accent font-medium'
                   : 'border-transparent text-theme-text-secondary hover:text-theme-text hover:border-theme-border'
@@ -70,10 +70,10 @@ export const ArtGallery = () => {
         })}
       </div>
 
-      {/* Artworks Editorial Grid */}
+      {/* Artworks Editorial Grid - 2x2 on Mobile */}
       <motion.div
         layout
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6"
       >
         <AnimatePresence>
           {filteredArtworks.map((artwork) => (
@@ -99,16 +99,16 @@ export const ArtGallery = () => {
               </div>
 
               {/* Artwork Caption Box */}
-              <div className="p-4 sm:p-5 space-y-1.5 border-t border-theme-border/60">
-                <div className="flex items-start justify-between gap-2">
-                  <h3 className="font-label text-lg sm:text-xl text-theme-text font-normal leading-snug group-hover:text-theme-accent transition-colors">
+              <div className="p-2.5 sm:p-4 md:p-5 space-y-1 sm:space-y-1.5 border-t border-theme-border/60">
+                <div className="flex items-start justify-between gap-1.5">
+                  <h3 className="font-label text-xs sm:text-base md:text-xl text-theme-text font-normal leading-snug group-hover:text-theme-accent transition-colors truncate">
                     {artwork.title}
                   </h3>
-                  <span className="font-label text-[10px] text-theme-muted-accent uppercase tracking-widest flex-shrink-0 mt-1">
+                  <span className="font-label text-[9px] sm:text-[10px] text-theme-muted-accent uppercase tracking-widest flex-shrink-0 mt-0.5">
                     {artwork.year}
                   </span>
                 </div>
-                <p className="font-sans text-xs text-theme-text-secondary line-clamp-1 font-light">
+                <p className="font-sans text-[10px] sm:text-xs text-theme-text-secondary line-clamp-1 font-light">
                   {artwork.medium}
                 </p>
               </div>
