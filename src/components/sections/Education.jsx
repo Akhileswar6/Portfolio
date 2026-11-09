@@ -1,9 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { educationData } from '../../data/experienceData';
-import { GraduationCap, MapPin } from 'lucide-react';
+import { GraduationCap, MapPin, ChevronDown } from 'lucide-react';
 
 export const Education = () => {
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleCoursework = (id) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
   return (
     <section id="education" className="py-28 px-6 md:px-12 max-w-7xl mx-auto border-t border-theme-border/60">
       {/* Section Header */}
@@ -85,23 +93,58 @@ export const Education = () => {
               </p>
             </div>
 
-            {/* Core Coursework Matrix */}
-            <div className="pt-6 mt-6 border-t border-theme-border/60 space-y-3">
-              <span className="font-label text-[10px] uppercase tracking-widest text-theme-muted-accent block">
-                Curricular Focus Areas
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {edu.coursework.map((course, cIdx) => (
-                  <motion.span
-                    key={cIdx}
-                    whileHover={{ scale: 1.05, y: -1 }}
-                    transition={{ duration: 0.15 }}
-                    className="font-sans text-[11px] px-2.5 py-1 bg-theme-bg-secondary border border-theme-border text-theme-text-secondary font-light hover:text-theme-text hover:border-theme-accent/60 transition-colors cursor-default"
+            {/* Core Coursework Matrix - Toggleable Hide/Show */}
+            <div className="pt-5 mt-6 border-t border-theme-border/60">
+              <button
+                type="button"
+                onClick={() => toggleCoursework(edu.id)}
+                className="w-full flex items-center justify-between group/toggle py-1 text-left focus:outline-none transition-colors"
+                aria-expanded={Boolean(expandedCards[edu.id])}
+              >
+                <div className="flex items-center gap-2">
+                  <span className="font-label text-[10px] sm:text-[11px] uppercase tracking-widest text-theme-muted-accent group-hover/toggle:text-theme-accent transition-colors font-medium">
+                    Curricular Focus Areas
+                  </span>
+                  <span className="text-[10px] px-1.5 py-0.5 bg-theme-bg-secondary border border-theme-border text-theme-text-secondary font-mono leading-none">
+                    {edu.coursework.length}
+                  </span>
+                </div>
+
+                <span className="flex items-center gap-1.5 font-label text-[10px] uppercase tracking-widest text-theme-accent group-hover/toggle:text-theme-accent-hover transition-colors font-medium">
+                  <span>{expandedCards[edu.id] ? 'Hide' : 'Show'}</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-300 ${
+                      expandedCards[edu.id] ? 'rotate-180' : ''
+                    }`}
+                  />
+                </span>
+              </button>
+
+              <AnimatePresence initial={false}>
+                {expandedCards[edu.id] && (
+                  <motion.div
+                    key="coursework-content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                    className="overflow-hidden"
                   >
-                    {course}
-                  </motion.span>
-                ))}
-              </div>
+                    <div className="pt-3.5 flex flex-wrap gap-1.5">
+                      {edu.coursework.map((course, cIdx) => (
+                        <motion.span
+                          key={cIdx}
+                          whileHover={{ scale: 1.05, y: -1 }}
+                          transition={{ duration: 0.15 }}
+                          className="font-sans text-[11px] px-2.5 py-1 bg-theme-bg-secondary border border-theme-border text-theme-text-secondary font-light hover:text-theme-text hover:border-theme-accent/60 transition-colors cursor-default"
+                        >
+                          {course}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
         ))}

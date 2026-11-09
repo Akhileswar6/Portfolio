@@ -73,11 +73,7 @@ export const workExperienceData = [
     current: false,
     tagline: 'High-Impact Community Engineering & Component Architecture',
     description: 'Selected as an official open-source contributor among thousands of applicants to build, test, and refine high-impact community repositories.',
-    responsibilities: [
-      'Submitted reviewed pull requests addressing performance bottlenecks and accessibility issues in React/Node codebases.',
-      'Mentored emerging contributors on Git collaboration, atomic pull requests, and CI/CD best practices.',
-      'Refactored frontend component libraries to achieve strict WCAG AA compliance standards.'
-    ],
+    responsibilities: ['Contributed to GirlScript Summer of Code (GSSoC) by collaborating on open-source projects, improving code quality, and implementing community-driven enhancements through GitHub pull requests.'],
     tech: ['React.js', 'JavaScript', 'Git', 'GitHub Actions', 'Open Source', 'Code Review'],
     badge: 'Selected Contributor',
     metrics: [
